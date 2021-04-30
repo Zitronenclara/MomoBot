@@ -1,0 +1,68 @@
+[
+    {
+        "factor": 0,
+        "color": "00001c",
+        "texts": ["Kein Kommentar... qwq", "Big uff..."],
+        "emoji": "💩"
+    },
+    {
+        "factor": 1,
+        "color": "020242",
+        "texts": ["Yikes", "Omega schlecht"],
+        "emoji": "🤡"
+    },
+    {
+        "factor": 2,
+        "color": "0a0a6b",
+        "texts": ["Nix gut", "Kaka"],
+        "emoji": "💢"
+    },
+    {
+        "factor": 3,
+        "color": "21218a",
+        "texts": ["Meh", "Scheiß Combi"],
+        "emoji": "💤"
+    },
+    {
+        "factor": 4,
+        "color": "3535bd",
+        "texts": ["Hmm... besser als nix", "Naaaaaah"],
+        "emoji": "👌"
+    },
+    {
+        "factor": 5,
+        "color": "5555fa",
+        "texts": ["Voll der Durchschnitt qwq", "Geeht sooo"],
+        "emoji": "💚"
+    },
+    {
+        "factor": 6,
+        "color": "6f3ac9",
+        "texts": ["Besser als der Durchschnitt", "Mmmmmhhhhhh"],
+        "emoji": "🧡"
+    },
+    {
+        "factor": 7,
+        "color": "8f26eb",
+        "texts": ["Da knisterts", "uii"],
+        "emoji": "💕"
+    },
+    {
+        "factor": 8,
+        "color": "db26eb",
+        "texts": ["OwO starkes knistern", "Voll gute Combi :3"],
+        "emoji": "💖"
+    },
+    {
+        "factor": 9,
+        "color": "f01a90",
+        "texts": ["Mashallah uwu Das wird was", "Uiiiiiiiiiiiiiiiiiiiii"],
+        "emoji": "💘"
+    },
+    {
+        "factor": 10,
+        "color": "ff0040",
+        "texts": ["Sicher das ihr noch nicht verheiratet seid? uwu", "Muss man dazu noch was sagen? UWU"],
+        "emoji": "💗💞💗"
+    }
+]

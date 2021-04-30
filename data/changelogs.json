@@ -1,0 +1,21 @@
+[
+    {
+        "name": "1.1",
+        "date": "23.04.2021 - 17:55Uhr",
+        "changes": [
+            "Dieser tolle **changelog** Befehl wurde hinzugefügt!",
+            "Momo spielt jetzt **zufällige Spiele!** Er ändert es alle 5 Minuten, derzeit sind es **25 verschiedene Texte**. In Zukunft kommen noch mehr.",
+            "Neue Befehle: **/avatar**, **/umfrage**, **/userinfo**"
+        ]
+    },
+    {
+        "name": "1.2",
+        "date": "irgendwann",
+        "changes": [
+            "Neuer Oberbefehl: **/fun** mit /mock, /ship",
+            "diverse **Stabilitätsverbesserungen**",
+            "Erweiterung des **Datenbanksystems**",
+            "Behebung von **Rechtschreibfehlern**"
+        ]
+    }
+]
