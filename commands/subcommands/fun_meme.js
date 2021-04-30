@@ -12,7 +12,7 @@ module.exports = async function(cP){
 
     let meme = await misc.getMeme(sub)
     if (meme.url.length === 0 || meme.nsfw || meme.spoiler){
-        return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Meme konnte nicht geladen werden. Versuch es erneut!", cP.author, "0xf52411", cP.interaction)
+        return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Meme kann nicht angezeigt werden.", cP.author, "0xf52411", cP.interaction)
     }
 
     const memeEmbed = new Discord.MessageEmbed()
