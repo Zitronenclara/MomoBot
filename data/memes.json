@@ -1,12 +1,17 @@
-[
-    "meme",
-    "memes",
-    "dankmemes",
-    "me_irl",
-    "ich_iel",
-    "animemes",
-    "Spacefrogs",
-    "antidigitalisten",
-    "wholesomememes",
-    "PrequelMemes"
-]
+{
+    "subs": [
+        "meme",
+        "memes",
+        "dankmemes",
+        "me_irl",
+        "ich_iel",
+        "animemes",
+        "Spacefrogs",
+        "antidigitalisten",
+        "wholesomememes",
+        "PrequelMemes"
+    ],
+    "blacklist": [
+        "blackhumor"
+    ]
+}

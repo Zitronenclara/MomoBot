@@ -5,9 +5,13 @@ const memeData = require('./../../data/memes.json')
 module.exports = async function(cP){
     let sub;
     if (cP.args[0].options === undefined){
-        sub = memeData[Math.floor(Math.random()*memeData.length)]
+        sub = memeData.subs[Math.floor(Math.random()*memeData.subs.length)]
     }else{
         sub = cP.args[0].options[0].value
+    }
+
+    if (memeData.blacklist.includes(sub)){
+        sub = memeData.subs[Math.floor(Math.random()*memeData.subs.length)]
     }
 
     let meme = await misc.getMeme(sub)
