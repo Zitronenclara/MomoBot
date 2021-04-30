@@ -11,6 +11,9 @@ module.exports = async function(cP){
     }
 
     let meme = await misc.getMeme(sub)
+    if (meme === null){
+        return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Subreddit konnte nicht gefunden werden.", cP.author, "0xf52411", cP.interaction)
+    }
     if (meme.url.length === 0 || meme.nsfw || meme.spoiler){
         return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Meme kann nicht angezeigt werden.", cP.author, "0xf52411", cP.interaction)
     }

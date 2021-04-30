@@ -106,7 +106,6 @@ module.exports.getMeme = async function(reddit) {
         const response = await axios.get(url);
         return response.data;
     } catch (error) {
-        logger.error(error + " [Sub Reddit: " + reddit + "]");
         return null;
     }
 }
