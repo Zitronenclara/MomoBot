@@ -7,6 +7,10 @@ const sub = [
     {
         "name": "ship",
         "execute": require('./subcommands/fun_ship.js')
+    },
+    {
+        "name": "meme",
+        "execute": require('./subcommands/fun_meme.js')
     }
 ]
 
@@ -42,6 +46,17 @@ module.exports = {
                     "required": false
                 }
             ]
+        },
+        {
+            "name": "meme",
+            "description": "MEMES",
+            "type": 1,
+            "options": [{
+                "name": "subreddit",
+                "description": "Subreddit (random subreddit wenn nicht spezifiziert)",
+                "type": 3,
+                "required": false
+            }]
         }
     ],
     permission: 0,

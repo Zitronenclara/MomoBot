@@ -99,3 +99,14 @@ module.exports.calcRequiredXpTillLvlup = function (lvl) {
     lvl = lvl - 1
     return (5*(lvl**2) + (50*lvl)) + 100
 }
+
+module.exports.getMeme = async function(reddit) {
+    let url = "https://meme-api.herokuapp.com/gimme" + (reddit == "" ? "" : "/" + reddit);
+    try {
+        const response = await axios.get(url);
+        return response.data;
+    } catch (error) {
+        logger.error(error + " [Sub Reddit: " + reddit + "]");
+        return null;
+    }
+}
