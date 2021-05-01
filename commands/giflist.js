@@ -38,7 +38,8 @@ module.exports = {
                 .setColor("0xa1f77c")
                 .addFields(
                     {name: "/fun aktion", value: "`baka; bite; bonk; highfive; hug; kill; kiss; lick; love; marry; massage; pat; poke; punch; slap; throw; tickle; wave; yaoihug; yaoikiss; yurihug; yurikiss`"}, 
-                    {name: "/fun emotion", value: "`angry; awkward; blush; bored; cry; dance; facepalm; laugh; no; nom; nosebleed; pout; run; shrug; sip; sleep; smile; smug; stare; yawn; yes`"});
+                    {name: "/fun emotion", value: "`angry; awkward; blush; bored; cry; dance; facepalm; laugh; no; nom; nosebleed; pout; run; shrug; sip; sleep; smile; smug; stare; yawn; yes`"}
+                );
             misc.sendInteraction(cP.client, {"content": "","embeds": [infoEmbed]}, cP.interaction)
         }
     }
