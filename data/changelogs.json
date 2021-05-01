@@ -14,6 +14,7 @@
         "changes": [
             "Neuer Oberbefehl: **/fun** mit aktion, emotion, meme, mock und ship",
             "Neuer Befehl: **/giflist** ==> Gif-Funktion ist noch nicht vollständig ausgebaut, es werden immer weiter neue Gifs dazu kommen. Mit /suggest könnt ihr selbst welche einsenden!",
+            "Weitere neue Befehle: **/credits**",
             "diverse **Stabilitätsverbesserungen**",
             "Erweiterung des **Datenbanksystems**",
             "Behebung von **Rechtschreibfehlern**"
