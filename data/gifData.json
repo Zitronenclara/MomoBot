@@ -1,0 +1,303 @@
+[
+    {
+        "name": "angry",
+        "title": "😡GRRR😡",
+        "color": "de0000",
+        "text": "{user} ist sauer >:C",
+        "description": "Wenn du einfach sauer bist >:C"
+    },
+    {
+        "name": "awkward",
+        "title": "🥴Wawoewhoahwo🥴",
+        "color": "d8db1a",
+        "text": "{user} fühlt sich echt weiiiird",
+        "description": "Wenn du einfach nur weird bist"
+    },
+    {
+        "name": "baka",
+        "title": "😡BAKA!!!😡",
+        "color": "3d0000",
+        "text": "{target} ist so ein Idiot...",
+        "description": "Wenn irgendjemand ein richtiger Idiot ist..."
+    },
+    {
+        "name": "bite",
+        "title": "😋MAMPF😋",
+        "color": "cc670e",
+        "text": "{user} beißt {target}",
+        "description": "Wenn du irgendjemanden einfach beißen willst hehe"
+    },
+    {
+        "name": "blush",
+        "title": "😳Uhhh😳",
+        "color": "c7083e",
+        "text": "{user} wird rot",
+        "description": "😳"
+    },
+    {
+        "name": "bonk",
+        "title": "BONK BONK BONK",
+        "color": "062926",
+        "text": "{user} bonkt {target}",
+        "description": "Wenn jemand einfach ein fettes BONK verdient hat"
+    },
+    {
+        "name": "bored",
+        "title": "😴GÄÄÄÄÄHN😴",
+        "color": "2a5975",
+        "text": "{user} fühlt sich gelangweilt",
+        "description": "Wenn du dich zu Tode langweilst"
+    },
+    {
+        "name": "cry",
+        "title": "😭😭😭",
+        "color": "002b8f",
+        "text": "{user} weint sich die Seele aus",
+        "description": "Wenn du einfach mal heulen musst :c"
+    },
+    {
+        "name": "dance",
+        "title": "🎵🎵🎵",
+        "color": "662abf",
+        "text": "{user} geht so richtig ab",
+        "description": "Wenn du so richtig am viben bist"
+    },
+    {
+        "name": "facepalm",
+        "title": "...",
+        "color": "024a52",
+        "text": "{user} gibt sich eine fette Facepalm",
+        "description": "Wenn jemand anderes mal wieder richtige scheiße labert"
+    },
+    {
+        "name": "highfive",
+        "title": "🤚HIGHFIVE🤚",
+        "color": "62d43f",
+        "text": "{user} und {target} schlagen sich ein!",
+        "description": "Wenn du jemand anderes ein Highfive geben willst"
+    },
+    {
+        "name": "hug",
+        "title": "🤗KUSCHEEEEELN🤗",
+        "color": "db3b7b",
+        "text": "{user} und {target} knuddeln miteinander uwu",
+        "description": "Wenn du jemand anderes einfach mal knuddeln möchtest uwu"
+    },
+    {
+        "name": "kill",
+        "title": "🔪🔪🔪",
+        "color": "a10313",
+        "text": "{user} killt {target} >:C",
+        "description": "Wenn du jemand anderes beseitigen willst >:c"
+    },
+    {
+        "name": "kiss",
+        "title": "😘😘😘",
+        "color": "bf0046",
+        "text": "{user} küsst {target} OwO",
+        "description": "Wenn du jemand anderes küssen möchtest owo"
+    },
+    {
+        "name": "laugh",
+        "title": "😂HAHAHA😂",
+        "color": "e5ed6d",
+        "text": "{user} lacht sich Tod",
+        "description": "Wenn dir einfach nach Lachen ist"
+    },
+    {
+        "name": "lick",
+        "title": "👅SCHLECK👅",
+        "color": "f030a0",
+        "text": "{user} schleckt {target} ab",
+        "description": "Wenn du jemanden einfach abschlecken willst hihi"
+    },
+    {
+        "name": "love",
+        "title": "💖💖💖",
+        "color": "ff0000",
+        "text": "{user} liebt {target} :3",
+        "description": "Wenn du jemanden deine Liebe zeigen möchtest :3"
+    },
+    {
+        "name": "marry",
+        "title": "💍💍💍",
+        "color": "eca3f7",
+        "text": "{user} und {target} heiraten OwO",
+        "description": "Wenn du jemanden heiraten möchtest uwu"
+    },
+    {
+        "name": "massage",
+        "title": "😌😌😌",
+        "color": "c9f7a3",
+        "text": "{user} massiert {target} hihi",
+        "description": "Wenn du jemanden massieren möchtest"
+    },
+    {
+        "name": "no",
+        "title": "NEIN",
+        "color": "b51204",
+        "text": "{user} sagt Nein",
+        "description": "Nein."
+    },
+    {
+        "name": "nom",
+        "title": "🍪NOMS🍪",
+        "color": "49cee3",
+        "text": "{user} isst was leckeres mjam",
+        "description": "Wenn du was leckeres isst"
+    },
+    {
+        "name": "nosebleed",
+        "title": "🩸🩸🩸",
+        "color": "821111",
+        "text": "{user}'s Nase blutet qwq",
+        "description": "Wenn deine Nase blutet"
+    },
+    {
+        "name": "pat",
+        "title": "😇PAT PAT😇",
+        "color": "a656d1",
+        "text": "{user} streichelt {target}'s Kopf",
+        "description": "Wenn du den Kopf von jemandem streicheln willst"
+    },
+    {
+        "name": "poke",
+        "title": "PIEKS",
+        "color": "95fcf7",
+        "text": "{user} piekst {target}",
+        "description": "Wenn du jemanden pieksen willst uwu"
+    },
+    {
+        "name": "pout",
+        "title": "😾HMPF😾",
+        "color": "751d36",
+        "text": "{user} schmollt",
+        "description": "Wenn du schmollst >:c"
+    },
+    {
+        "name": "punch",
+        "title": "👊BAM👊",
+        "color": "ad6b4c",
+        "text": "{target} bekommt {user}'s Faust zu spüren",
+        "description": "Wenn du jemandem einfach mal deine Faust zeigen willst >:C"
+    },
+    {
+        "name": "run",
+        "title": "🏃🏃🏃",
+        "color": "8b9159",
+        "text": "{user} rennt weg",
+        "description": "Wenn dir nach wegrennen ist qwq"
+    },
+    {
+        "name": "shrug",
+        "title": "🤷🤷🤷",
+        "color": "527da8",
+        "text": "{user} ist es komplett egal",
+        "description": "Wenn dir etwas einfach egal ist"
+    },
+    {
+        "name": "sip",
+        "title": "🥤SCHLÜRF🥤",
+        "color": "2ea2e6",
+        "text": "{user} schlürft genüsslich",
+        "description": "Wenn du an deinem Getränk schlürfen willst"
+    },
+    {
+        "name": "slap",
+        "title": "🖐KLATSCH🖐",
+        "color": "ba0010",
+        "text": "{user} bekommt {target} >:c",
+        "description": "Wenn jemand anderes deine flache Hand spüren soll >:c"
+    },
+    {
+        "name": "sleep",
+        "title": "💤💤💤",
+        "color": "1d106e",
+        "text": "{user} schläft",
+        "description": "Wenn du schläfst"
+    },
+    {
+        "name": "smile",
+        "title": "😁😁😁",
+        "color": "14db60",
+        "text": "{user} grinst",
+        "description": "Wenn du grinsen willst"
+    },
+    {
+        "name": "smug",
+        "title": "😏😏😏",
+        "color": "8f9c00",
+        "text": "{user} grinst selbstgefällig",
+        "description": "😏"
+    },
+    {
+        "name": "stare",
+        "title": "👀👀👀",
+        "color": "3290c7",
+        "text": "{user} starrt in der Gegend herum",
+        "description": "Wenn du einfach ins nichts starrst"
+    },
+    {
+        "name": "throw",
+        "title": "💢💢💢",
+        "color": "571a1a",
+        "text": "{user} wirft etwas auf {target}",
+        "description": "Wenn du jemanden mit etwas abwerfen möchtest"
+    },
+    {
+        "name": "tickle",
+        "title": "Hihi",
+        "color": "a62677",
+        "text": "{user} kitzelt {target}",
+        "description": "Wenn du jemanden auskitzeln willst"
+    },
+    {
+        "name": "wave",
+        "title": "👋👋👋",
+        "color": "f3f705",
+        "text": "{user} winkt {target} zu",
+        "description": "Wenn du jemandem zuwinken möchtest"
+    },
+    {
+        "name": "yaoihug",
+        "title": "🤗KUSCHEEEEELN🤗",
+        "color": "db3b7b",
+        "text": "{user} und {target} knuddeln miteinander uwu",
+        "description": "Wenn du jemand anderes einfach mal knuddeln möchtest uwu (♂+♂)"
+    },
+    {
+        "name": "yaoikiss",
+        "title": "😘😘😘",
+        "color": "bf0046",
+        "text": "{user} küsst {target} OwO",
+        "description": "Wenn du jemand anderes küssen möchtest owo (♂+♂)"
+    },
+    {
+        "name": "yawn",
+        "title": "GÄÄÄÄÄÄÄÄÄÄÄÄÄÄHN",
+        "color": "170161",
+        "text": "{user} gähnt",
+        "description": "Wenn du gähnen willst"
+    },
+    {
+        "name": "yes",
+        "title": "JA",
+        "color": "00ff1e",
+        "text": "{user} sagt Ja!",
+        "description": "Ja."
+    },
+    {
+        "name": "yurihug",
+        "title": "🤗KUSCHEEEEELN🤗",
+        "color": "db3b7b",
+        "text": "{user} und {target} knuddeln miteinander uwu",
+        "description": "Wenn du jemand anderes einfach mal knuddeln möchtest uwu (♀+♀)"
+    },
+    {
+        "name": "yurikiss",
+        "title": "😘😘😘",
+        "color": "bf0046",
+        "text": "{user} küsst {target} OwO",
+        "description": "Wenn du jemand anderes küssen möchtest owo (♀+♀)"
+    }
+]

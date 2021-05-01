@@ -9,7 +9,7 @@ module.exports.load = async function (client, userid){
         userid: userid
     }).then(async function (doc) {
         let userData = await client.users.fetch(userid)
-        let userObject = {"username": userData.username, "discriminator": userData.discriminator}
+        let userObject = {"username": userData.username, "discriminator": userData.discriminator, "avatar": userData.avatarURL()}
         if (doc == null) {
             let ls = new levelSystem({"new": true})
             const newDoc = new User({

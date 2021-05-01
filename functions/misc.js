@@ -109,3 +109,13 @@ module.exports.getMeme = async function(reddit) {
         return null;
     }
 }
+
+module.exports.getGif = async function(category) {
+    let url = "https://images.stefftek.de/" + category
+    try {
+        const response = await axios.get(url);
+        return response.data;
+    } catch (error) {
+        return null;
+    }
+}
