@@ -7,7 +7,7 @@ module.exports.generateEmbed = async function (client, title, desc, trigger, col
         color = "0xFFEC49"
     }
     const embed = new Discord.MessageEmbed()
-        .setAuthor(title, trigger.displayAvatarURL)
+        .setAuthor(title, trigger.data.userData.avatar)
         .setColor(color)
         .setDescription(desc);
     client.api.interactions(interaction.id, interaction.token).callback.post({
@@ -19,6 +19,21 @@ module.exports.generateEmbed = async function (client, title, desc, trigger, col
             }
         }
     })
+}
+
+module.exports.sendLog = async function (client, author, title, desc, color) {
+    if (!color) {
+        color = "0xFFEC49"
+    }
+
+    const embed = new Discord.MessageEmbed()
+        .setAuthor(author.userData.username+"#"+author.userData.discriminator, author.userData.avatar)
+        .setTitle(title)
+        .setColor(color)
+        .setDescription("**`"+desc+"`**")
+        .setFooter("[ID: "+author.userid+"]");
+    let ch = await client.channels.fetch(config.logChannel)
+    ch.send(embed)
 }
 
 module.exports.sendInteraction = async function (client, data, interaction, type) {

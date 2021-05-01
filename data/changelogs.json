@@ -10,11 +10,11 @@
     },
     {
         "name": "1.2",
-        "date": "irgendwann",
+        "date": "01.05.2021 - 00:00Uhr",
         "changes": [
             "Neuer Oberbefehl: **/fun** mit aktion, emotion, meme, mock und ship",
             "Neuer Befehl: **/giflist** ==> Gif-Funktion ist noch nicht vollständig ausgebaut, es werden immer weiter neue Gifs dazu kommen. Mit /suggest könnt ihr selbst welche einsenden!",
-            "Weitere neue Befehle: **/credits**",
+            "Weitere neue Befehle: **/credits** und **/suggest**",
             "diverse **Stabilitätsverbesserungen**",
             "Erweiterung des **Datenbanksystems**",
             "Behebung von **Rechtschreibfehlern**"
