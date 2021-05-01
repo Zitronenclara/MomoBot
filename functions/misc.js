@@ -134,3 +134,13 @@ module.exports.getGif = async function(category) {
         return null;
     }
 }
+
+module.exports.getCategories = async function() {
+    let url = "https://images.stefftek.de/categories"
+    try {
+        const response = await axios.get(url);
+        return response.data;
+    } catch (error) {
+        return null;
+    }
+}
