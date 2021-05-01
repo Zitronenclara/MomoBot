@@ -24,8 +24,8 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', async () => {
-    let cmd = client.commands.get("suggest")
-    misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
+    //let cmd = client.commands.get("fun")
+    //misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
     console.log('Bot Online!');
 
     client.ws.on('INTERACTION_CREATE', async interaction => {
