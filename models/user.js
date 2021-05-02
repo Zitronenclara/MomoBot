@@ -4,6 +4,7 @@ const userSchema = mongoose.Schema({
     userid: String,
     userData: Object,
     levelData: Object,
+    inventory: Object,
     dataversion: Number,
     ships: Array
 });
