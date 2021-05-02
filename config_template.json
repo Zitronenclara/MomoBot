@@ -1,0 +1,7 @@
+{
+    "dburl": "url of the bot's MongoDB database",
+    "token": "bot token",
+    "applicationID": "bot application ID",
+    "mainGuildID": "ID of the bot's main guild",
+    "logChannel": "ID of the log channel"
+}
