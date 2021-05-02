@@ -43,7 +43,7 @@ module.exports = class Inventory {
     }
 
     checkForItem(cls){
-        let item = this.items.find(i => i.id = cls.id)
+        let item = this.items.find(i => i.id === cls.id)
         if(!item){
             return null
         }else{
