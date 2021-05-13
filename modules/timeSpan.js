@@ -135,7 +135,12 @@ module.exports = class timeSpan {
             return {unit: "hour", unit_short: "hrs", unit_shortest: "h", amount_fixed: parseFloat((this.time/3600000).toFixed(2)), amount_round: Math.round(this.time/3600000), amount_exact: this.time/3600000}
         }
 
-        // return days
-        return {unit: "day", unit_short: "days", unit_shortest: "d", amount_fixed: parseFloat((this.time/86400000).toFixed(2)), amount_round: Math.round(this.time/86400000), amount_exact: this.time/86400000}
+        // less than a year => return days
+        if (this.time / 86400000 < 365.25){
+            return {unit: "day", unit_short: "days", unit_shortest: "d", amount_fixed: parseFloat((this.time/86400000).toFixed(2)), amount_round: Math.round(this.time/86400000), amount_exact: this.time/86400000}
+        }
+        
+        // return years
+        return {unit: "year", unit_short: "yrs", unit_shortest: "y", amount_fixed: parseFloat((this.time/31557600000).toFixed(2)), amount_round: Math.round(this.time/31557600000), amount_exact: this.time/31557600000}
     }
 }
