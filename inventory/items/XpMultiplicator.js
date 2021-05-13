@@ -3,7 +3,7 @@ const timeSpan = require('./../../modules/timeSpan.js')
 
 const data = {
     "name": "XP-Multiplikator",
-    "desc": "Dieser XP-Multiplikator erhöht die XP, welche du pro Nachricht pro Minute erhältst, um einen Faktor von **`%factor%`** für `*%duration%h*`",
+    "desc": "Dieser XP-Multiplikator erhöht die XP, welche du pro Nachricht pro Minute erhältst, um einen Faktor von **`%factor%`** für `*%duration%*`",
     "icon": "842392480669499402"
 }
 

@@ -121,21 +121,21 @@ module.exports = class timeSpan {
      */
     getSuitableTime(){
         // less than a minute => return seconds
-        if (time / 1000 < 60){
-            return {unit: "second", unit_short: "secs", unit_shortest: "s", amount_fixed: parseFloat(Math.round(time/1000).toFixed(2)), amount_round: Math.round(time/1000), amount_exact: time/1000}
+        if (this.time / 1000 < 60){
+            return {unit: "second", unit_short: "secs", unit_shortest: "s", amount_fixed: parseFloat((this.time/1000).toFixed(2)), amount_round: Math.round(this.time/1000), amount_exact: this.time/1000}
         }
 
         // less than an hour => return minutes
-        if (time / 60000 < 60){
-            return {unit: "minute", unit_short: "mins", unit_shortest: "m", amount_fixed: parseFloat(Math.round(time/60000).toFixed(2)), amount_round: Math.round(time/60000), amount_exact: time/60000}
+        if (this.time / 60000 < 60){
+            return {unit: "minute", unit_short: "mins", unit_shortest: "m", amount_fixed: parseFloat((this.time/60000).toFixed(2)), amount_round: Math.round(this.time/60000), amount_exact: this.time/60000}
         }
 
         // less than a day => return hours
-        if (time / 3600000 < 24){
-            return {unit: "hour", unit_short: "hrs", unit_shortest: "h", amount_fixed: parseFloat(Math.round(time/3600000).toFixed(2)), amount_round: Math.round(time/3600000), amount_exact: time/3600000}
+        if (this.time / 3600000 < 24){
+            return {unit: "hour", unit_short: "hrs", unit_shortest: "h", amount_fixed: parseFloat((this.time/3600000).toFixed(2)), amount_round: Math.round(this.time/3600000), amount_exact: this.time/3600000}
         }
 
         // return days
-        return {unit: "day", unit_short: "days", unit_shortest: "d", amount_fixed: parseFloat(Math.round(time/86400000).toFixed(2)), amount_round: Math.round(time/86400000), amount_exact: time/86400000}
+        return {unit: "day", unit_short: "days", unit_shortest: "d", amount_fixed: parseFloat((this.time/86400000).toFixed(2)), amount_round: Math.round(this.time/86400000), amount_exact: this.time/86400000}
     }
 }
