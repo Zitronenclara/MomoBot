@@ -1,0 +1,25 @@
+{
+  "name": "momobot",
+  "version": "1.3.0",
+  "description": "a one-server Discord Bot",
+  "main": "momobot.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zitronenclara/MomoBot.git"
+  },
+  "author": "Clara Hertel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zitronenclara/MomoBot/issues"
+  },
+  "homepage": "https://github.com/Zitronenclara/MomoBot#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.3",
+    "mongoose": "^5.12.8"
+  }
+}
