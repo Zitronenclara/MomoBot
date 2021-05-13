@@ -4,8 +4,8 @@
   "description": "a one-server Discord Bot",
   "main": "momobot.js",
   "scripts": {
-    "test": "nodemon index.js",
-    "start": "node index.js"
+    "test": "nodemon momobot.js",
+    "start": "node momobot.js"
   },
   "repository": {
     "type": "git",
