@@ -21,7 +21,7 @@ class levelSystem {
             this.nextGainStamp = obj.nextGainStamp
             this.new = obj.new
 
-            if (!obj.factor) {
+            if (obj.factor === undefined) {
                 this.factor = 1
                 this.multActive = false
                 this.multStamp = 0
@@ -38,9 +38,10 @@ class levelSystem {
             return false
         }
 
-        let aktustamp = +new Date()
+        this.checkIfMultExpired()
+        let aktustamp = + new Date()
         if (aktustamp >= this.nextGainStamp) {
-            let randomXP = misc.randomInt(config.xpGain.min, config.xpGain.max)
+            let randomXP = Math.round(misc.randomInt(config.xpGain.min, config.xpGain.max)*this.factor)
             this.xpGes += randomXP
             this.xp += randomXP
             this.nextGainStamp = aktustamp + config.xpGain.every * 1000
@@ -87,6 +88,23 @@ class levelSystem {
 
     calcRemainingXP() {
         return this.calcRequiredXP - this.xp
+    }
+
+    addMultiplicator(factor, duration) {
+        this.multActive = true
+        this.multStamp = + new Date () + duration
+        this.factor = factor
+    }
+
+    checkIfMultExpired() {
+        let stamp = + new Date()
+        
+        if (this.multActive){
+            if (stamp > this.multStamp){
+                this.multActive = false
+                this.factor = 1
+            }
+        }
     }
 }
 
