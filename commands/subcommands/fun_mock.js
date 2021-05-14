@@ -9,7 +9,9 @@ module.exports = async function(cP){
 
     let result = "";
     for(i = 0; i < text.length; i++){
-        if (i % 2 == 0){
+        if (text.charAt(i) === "i" || text.charAt(i) === "I"){
+            result += "i"
+        }else if (i % 2 == 0){
             result += text.charAt(i).toUpperCase()
         }else{
             result += text.charAt(i).toLowerCase()
