@@ -12,7 +12,6 @@ module.exports = {
             "required": true
         }
 	],
-	permission: 0,
 	async execute(cP) {
         let suggestion = cP.args[0].value
         if (suggestion.length > 2048){

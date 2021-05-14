@@ -14,7 +14,6 @@ module.exports = {
 		"required": true
 	}
 	],
-	permission: 0,
 	async execute(cP) {
 		let targetU = await cP.client.users.fetch(cP.args[0].value);
         let targetGuild = await cP.client.guilds.fetch(config.mainGuildID)

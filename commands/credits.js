@@ -5,7 +5,6 @@ module.exports = {
     name: 'credits',
     description: 'Zeigt dir mehr Informationn über den Bot und die Menschen dahinter uwu',
     options: [],
-    permission: 0,
     async execute(cP) {
         const creditsEmbed = new Discord.MessageEmbed()
             .setTitle("CREDITS")

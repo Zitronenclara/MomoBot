@@ -12,7 +12,6 @@ module.exports = {
 		"required": true
 	}
 	],
-	permission: 0,
 	async execute(cP) {
 		let targetU = await cP.client.users.fetch(cP.args[0].value);
 

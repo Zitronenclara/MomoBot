@@ -154,7 +154,6 @@ module.exports = {
             ]
         }
     ],
-    permission: 0,
     async execute(cP) {
         let subCommand = sub.find(s => s.name === cP.args[0].name)
         subCommand.execute(cP)

@@ -11,7 +11,6 @@ module.exports = {
         "type": 3,
         "required": false
     }],
-    permission: 0,
     async execute(cP) {
         let specified = cP.args !== undefined
 

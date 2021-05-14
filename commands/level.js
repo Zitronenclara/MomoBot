@@ -13,7 +13,6 @@ module.exports = {
 		"required": false
 	}
 	],
-	permission: 0,
 	async execute(cP) {
 		let target;
 		let data;

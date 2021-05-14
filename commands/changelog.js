@@ -17,7 +17,6 @@ module.exports = {
             ]
         }
 	],
-	permission: 0,
 	async execute(cP) {
 		let v = cP.args[0].value
         let entry = changelogs.find(c => c.name === v)

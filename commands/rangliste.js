@@ -7,7 +7,6 @@ module.exports = {
 	name: 'rangliste',
 	description: 'Zeigt dir die serverweite Level-Rangliste',
 	options: [],
-	permission: 0,
 	async execute(cP) {
 		let ranking = await User.find({}).sort({'levelData.xpGes': 'desc'})
         let rankObject = ranking.find(r => r.userid === cP.author.info.id)

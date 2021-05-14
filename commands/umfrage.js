@@ -22,7 +22,6 @@ module.exports = {
             ]
         }
     ],
-    permission: 0,
     async execute(cP) {
         if(cP.args[0].value.length > 2048){
             return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Die Frage muss kürzer als 2048 Zeichen lang sein!", cP.author, "0xf52411", cP.interaction)
