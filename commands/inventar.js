@@ -1,6 +1,13 @@
 const Discord = require('discord.js')
 const misc = require('./../functions/misc.js')
 
+const sub = [
+    {
+        "name": "items",
+        "execute": require('./subcommands/inventar_items.js')
+    }
+]
+
 module.exports = {
     name: 'inventar',
     description: 'Verschiedene Befehle zur Verwaltung deines Inventars',
@@ -24,6 +31,7 @@ module.exports = {
         }
     ],
     async execute(cP) {
-        
+        let subCommand = sub.find(s => s.name === cP.args[0].name)
+        subCommand.execute(cP)
     }
 };
