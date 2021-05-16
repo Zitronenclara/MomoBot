@@ -13,7 +13,8 @@ module.exports = {
             "required": true,
             "choices": [
                 {"name": "v1.1", "value": "1.1"},
-                {"name": "v1.2", "value": "1.2"}
+                {"name": "v1.2", "value": "1.2"},
+                {"name": "v1.3", "value": "1.3"}
             ]
         }
 	],
