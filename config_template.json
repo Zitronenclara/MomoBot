@@ -1,4 +1,5 @@
 {
+    "ownerid": "the bot owner's ID",
     "dburl": "url of the bot's MongoDB database",
     "token": "bot token",
     "applicationID": "bot application ID",

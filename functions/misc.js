@@ -106,6 +106,26 @@ module.exports.deleteGuildCommand = async function (application_id, guild_id, co
         });
 }
 
+module.exports.enableCommandOwnerOnly = async function (application_id, guild_id, command_id) {
+    let headers = {
+        "Authorization": "Bot " + config.token
+    }
+    let json = {
+        "permissions": [
+            {
+                "id": config.ownerid,
+                "type": 2,
+                "permission": True
+            }
+        ]
+    }
+
+    axios.put(`https://discord.com/api/v8/applications/${application_id}/guilds/${guild_id}/commands/${command_id}/permissions`, headers=headers, json=json)
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
 module.exports.randomInt = function (min, max) {
     return parseInt(Math.floor(Math.random() * (max - min) + min))
 }

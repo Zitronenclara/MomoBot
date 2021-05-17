@@ -24,6 +24,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', async () => {
+    //misc.getGuildCommands(config.applicationID, config.mainGuildID)
     //let cmd = client.commands.get("fun")
     //misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
     console.log('Bot Online!');
