@@ -33,10 +33,12 @@ module.exports = async function(cP) {
     let currentAdd;
     let currentClass;
     let currentItem;
+    let currentInfo;
     for(i = 0; i < invItems.length; i++){
         currentClass = items[invItems[i].name]
         currentItem = currentClass.loadFrom(invItems[i])
-        currentAdd = "`["+i+"]` ❥ **`"+currentItem.count+"x ["+currentItem.getInfo().invname+"]`**\n"
+        currentInfo = currentItem.getInfo()
+        currentAdd = "`["+i+"]` ❥ ("+currentItem.count+"x) "+currentInfo.icon+" **`["+currentInfo.invname+"]`**\n"
 
         if ((list[index] + currentAdd).length > 2000){
             list[index].push(currentAdd)
@@ -61,7 +63,7 @@ module.exports = async function(cP) {
     if (displayItems.length === 0){
         invEmbed.setDescription("**`Keine Items im Inventar`**")
     }else{
-        invEmbed.setDescription("`[ID]` ❥ **`Anzahl [Item Name]`**\n\n"+displayItems)
+        invEmbed.setDescription("`[ID]` ❥ (Anzahl) **`[Item Name]`**\n\n"+displayItems)
     }
     misc.sendInteraction(cP.client, {"content": "","embeds": [invEmbed]}, cP.interaction)
 }

@@ -1,10 +1,16 @@
 const Discord = require('discord.js')
 const misc = require('./../functions/misc.js')
 
-const sub = [{
-    "name": "items",
-    "execute": require('./subcommands/inventar_items.js')
-}]
+const sub = [
+    {
+        "name": "items",
+        "execute": require('./subcommands/inventar_items.js')
+    },
+    {
+        "name": "iteminfo",
+        "execute": require('./subcommands/inventar_iteminfo.js')
+    }
+]
 
 module.exports = {
     name: 'inventar',
@@ -52,6 +58,12 @@ module.exports = {
                     "description": "Die ID des Items, kann mit /inventar items abgerufen werden",
                     "type": 4,
                     "required": true
+                },
+                {
+                    "name": "user",
+                    "description": "Wenn du das Inventar eines anderen Users ansteuern willst",
+                    "type": 6,
+                    "required": false
                 }
             ]
         },

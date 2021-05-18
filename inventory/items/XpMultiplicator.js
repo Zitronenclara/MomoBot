@@ -4,7 +4,9 @@ const timeSpan = require('./../../modules/timeSpan.js')
 const data = {
     "name": "XP-Multiplikator",
     "desc": "Dieser XP-Multiplikator erhöht die XP, welche du pro Nachricht pro Minute erhältst, um einen Faktor von **`%factor%`** für **`%duration%`**",
-    "icon": "842392480669499402"
+    "icon": "<:xpboost:842392480669499402>",
+    "icon_id": "842392480669499402",
+    "color": "6a398f"
 }
 
 module.exports = class XpMultiplicator extends Item {
@@ -22,6 +24,6 @@ module.exports = class XpMultiplicator extends Item {
     getInfo(){
         let d = new timeSpan(this.duration).getSuitableTime()
         let desc = data.desc.replace("%factor%", this.factor+"x").replace("%duration%", d.amount_fixed+d.unit_shortest)
-        return {name: data.name, invname: this.factor+"-fach XP für "+d.amount_fixed+d.unit_shortest, desc: desc, icon: data.icon}
+        return {name: data.name, invname: this.factor+"-fach XP für "+d.amount_fixed+d.unit_shortest, desc: desc, icon: data.icon, icon_id: data.icon_id, color: data.color}
     }
 }
