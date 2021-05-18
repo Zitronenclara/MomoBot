@@ -1,4 +1,7 @@
 const botUser = require('./../../modules/userdataHandler.js')
+const items = require('./../../inventory/items/items.js')
+const misc = require('./../../functions/misc.js')
+const Discord = require('discord.js')
 
 module.exports = async function(cP) {
     let args = cP.args[0].options
@@ -23,4 +26,42 @@ module.exports = async function(cP) {
             page = pageArg
         }
     }
+
+    let invItems = target.inventory.items
+    let list = [""]
+    let index = 0
+    let currentAdd;
+    let currentClass;
+    let currentItem;
+    for(i = 0; i < invItems.length; i++){
+        currentClass = items[invItems[i].name]
+        currentItem = currentClass.loadFrom(invItems[i])
+        currentAdd = "`["+i+"]` ❥ **`"+currentItem.count+"x ["+currentItem.getInfo().invname+"]`**\n"
+
+        if ((list[index] + currentAdd).length > 2000){
+            list[index].push(currentAdd)
+            index++
+        }else{
+            list[index] += currentAdd
+        }
+    }
+
+    let pageIndex;
+    if (page > list.length || page < 0){
+        pageIndex = 0
+    }else{
+        pageIndex = page - 1
+    }
+
+    let displayItems = list[pageIndex]
+    const invEmbed = new Discord.MessageEmbed()
+        .setAuthor(target.userData.username+"#"+target.userData.discriminator, target.userData.avatar)
+        .setTitle("INVENTAR | Seite ("+(pageIndex+1)+"/"+list.length+")")
+        .setColor("0xffbb4b");
+    if (displayItems.length === 0){
+        invEmbed.setDescription("**`Keine Items im Inventar`**")
+    }else{
+        invEmbed.setDescription("`[ID]` ❥ **`Anzahl [Item Name]`**\n\n"+displayItems)
+    }
+    misc.sendInteraction(cP.client, {"content": "","embeds": [invEmbed]}, cP.interaction)
 }

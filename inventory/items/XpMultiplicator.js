@@ -22,6 +22,6 @@ module.exports = class XpMultiplicator extends Item {
     getInfo(){
         let d = new timeSpan(this.duration).getSuitableTime()
         let desc = data.desc.replace("%factor%", this.factor+"x").replace("%duration%", d.amount_fixed+d.unit_shortest)
-        return {name: data.name, desc: desc, icon: data.icon}
+        return {name: data.name, invname: this.factor+"-fach XP für "+d.amount_fixed+d.unit_shortest, desc: desc, icon: data.icon}
     }
 }
