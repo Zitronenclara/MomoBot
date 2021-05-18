@@ -3,6 +3,10 @@ const misc = require('./../functions/misc.js')
 
 const sub = [
     {
+        "name": "einsetzen",
+        "execute": require('./subcommands/inventar_einsetzen.js')
+    },
+    {
         "name": "items",
         "execute": require('./subcommands/inventar_items.js')
     },

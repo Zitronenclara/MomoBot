@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const misc = require('./../functions/misc.js')
 const botUser = require('./../modules/userdataHandler.js')
+const timeSpan = require('./../modules/timeSpan.js')
 
 module.exports = {
 	name: 'level',
@@ -28,6 +29,18 @@ module.exports = {
 		let xp = data.levelData.xp
 		let percent = ((xp/reqXP)*100).toFixed(2)
 
+		let boosterText;
+		data.levelData.checkIfMultExpired()
+		if (data.levelData.multActive){
+			let stamp = + new Date()
+			let remaining = data.levelData.multStamp - stamp
+			let time = new timeSpan(remaining).getSuitableTime()
+			let timeString = time.amount_fixed+time.unit_shortest
+			boosterText = "**`"+data.levelData.factor+"-fache XP für "+timeString+"`**"
+		}else{
+			boosterText = "**`Kein XP-Booster Aktiv`**"
+		}
+
 		const levelembedd = new Discord.MessageEmbed()
 			.setThumbnail(target.avatarURL())
 			.setTitle(target.username+"#"+target.discriminator+"'s Levelinfo")
@@ -35,7 +48,8 @@ module.exports = {
 			.addFields(
 				{name: "LEVEL", value: "**`"+data.levelData.lvl+"`**"},
 				{name: "ERFAHRUNG", value: "**`"+xp+"/"+reqXP+"XP`** Gesamt: **`"+data.levelData.xpGes+"XP`**"},
-				{name: "FORTSCHRITT `("+percent+"%)`", value: data.levelData.generateProgressBar()}
+				{name: "FORTSCHRITT `("+percent+"%)`", value: data.levelData.generateProgressBar()},
+				{name: "XP-BOOST", value: boosterText}
 			);
 		misc.sendInteraction(cP.client, {"content": "","embeds": [levelembedd]}, cP.interaction)
 	}

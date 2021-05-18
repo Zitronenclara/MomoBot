@@ -24,7 +24,6 @@ module.exports = async function(cP) {
     if (userMode){
         let userData = await botUser.load(cP.client, userArg)
         userData.inventory.addItem(item, obj.count)
-        userData.markModified("inventory")
         await userData.save().catch(err => console.log(err));
 
         let info = item.getInfo()
