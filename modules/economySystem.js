@@ -1,9 +1,12 @@
 const config = require('./settings/economySystem.json')
 const misc = require('./../functions/misc.js')
+const timeSpan = require('./timeSpan.js')
 
 module.exports = class economySystem {
     constructor() {
         this.coins = 0
+        this.coinsGained = 0
+        this.coinsSpent = 0
         this.dailyStamp = 0
         this.dailyStreak = 0
         this.maxStreak = 0
@@ -19,7 +22,37 @@ module.exports = class economySystem {
     }
 
     doDaily(lvlSys) {
-        
+        let nowStamp = + new Date()
+        let nextDailyStamp = new timeSpan(this.dailyStamp).getNextMidnightStamp()
+        if (lvlSys.gainsToday < 5){
+            return {success: false, message: "Du musst **mindestens 5 Minuten aktiv im Chat** geschrieben haben, um deine täglichen MomoCoins für heute abzuholen!"}
+        }
+        if (nowStamp < nextDailyStamp){
+            let remainingTime = new timeSpan(nextDailyStamp - nowStamp).getBeautifiedTime()
+            return {success: false, message: "Du musst noch **`"+remainingTime+"`** warten, bevor du deine nächsten täglichen MomoCoins abholen kannst!"}
+        }
+
+        this.checkStreak()
+        let coinsGain = this.calcDailyGain(lvlSys)
+        this.coins += coinsGain
+        this.coinsGained += coinsGain
+        this.dailyStamp = nowStamp
+        return {success: true, amount: coinsGain, streak: this.dailyStreak}
+    }
+
+    checkStreak() {
+        let lastDaily = new timeSpan(this.dailyStamp).getCurrentMidnightStamp()
+        let nowStamp = + new Date()
+
+        // bigger than 2 days in milliseconds
+        if (nowStamp - lastDaily > 172800000){
+            this.dailyStreak = 1
+        }else{
+            this.dailyStreak += 1
+            if (this.dailyStreak > this.maxStreak){
+                this.maxStreak = this.dailyStreak
+            }
+        }
     }
 
     calcDailyGain(lvlSys) {
