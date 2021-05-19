@@ -232,7 +232,7 @@ module.exports = class timeSpan {
      * 
      * @returns {number} midnight timestamp of the day after the specified day
      */
-     getNexttMidnightStamp(){
+     getNextMidnightStamp(){
         let d = new Date(this.time)
         d.setHours(24, 0, 0, 0)
         return + d

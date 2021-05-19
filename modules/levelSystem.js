@@ -1,5 +1,6 @@
 const config = require('./settings/levelSystem.json')
 const misc = require('./../functions/misc.js')
+const timeSpan = require('./timeSpan.js')
 
 class levelSystem {
     constructor(obj) {
@@ -13,6 +14,8 @@ class levelSystem {
             this.factor = 1
             this.multActive = false
             this.multStamp = 0
+            this.gainsToday = 0
+            this.gainsTodayStamp = 0
             this.new = false
         } else {
             this.xp = obj.xp
@@ -26,11 +29,15 @@ class levelSystem {
                 this.factor = 1
                 this.multActive = false
                 this.multStamp = 0
+                this.gainsToday = 0
+                this.gainsTodayStamp = 0
                 this.boosterReward = "/"
             } else {
                 this.factor = obj.factor
                 this.multActive = obj.multActive
                 this.multStamp = obj.multStamp
+                this.gainsToday = obj.gainsToday
+                this.gainsTodayStamp = obj.gainsTodayStamp
                 this.boosterReward = obj.boosterReward
             }
         }
@@ -48,10 +55,22 @@ class levelSystem {
             this.xpGes += randomXP
             this.xp += randomXP
             this.nextGainStamp = aktustamp + config.xpGain.every * 1000
+            this.updateGainsToday()
             this.checkForLvlUp()
             return true
         }
         return false
+    }
+
+    updateGainsToday() {
+        let nowStamp = + new Date()
+        let nextStamp = new timeSpan(this.gainsTodayStamp).getNextMidnightStamp()
+        if (nowStamp > nextStamp){
+            this.gainsTodayStamp = nowStamp
+            this.gainsToday = 1
+        }else{
+            this.gainsToday += 1
+        }
     }
 
     checkForLvlUp() {
