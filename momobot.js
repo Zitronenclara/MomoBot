@@ -25,7 +25,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', async () => {
-    //misc.getGuildCommands(config.applicationID, config.mainGuildID)
+    misc.getGuildCommands(config.applicationID, config.mainGuildID)
     //let cmd = client.commands.get("fun")
     //misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
     console.log('Bot Online!');
@@ -80,7 +80,7 @@ client.on('message', async (message) => {
                 .setAuthor(message.author.username+"#"+message.author.discriminator, message.author.displayAvatarURL())
                 .setTitle("BELOHNUNG VERFÜGBAR")
                 .setColor("0x79BF63")
-                .setDescription("Weil du Level **`"+authorData.levelData.lvl+"`** erreicht hast, erhältst du folgenden XP-Booster:\n\n**`"+booster.getInfo().invname+"`**\n\n*Du kannst deine XP-Booster in #Bot-Befehle mit *`/inventar items`* nachschauen und mit *`/inventar einsetzen`* verwenden.*");
+                .setDescription("Weil du Level **`"+authorData.levelData.lvl+"`** erreicht hast, erhältst du folgenden XP-Booster:\n\n**`"+booster.getInfo().invname+"`**\n\nDu kannst deine XP-Booster in #Bot-Befehle mit *`/inventar items`* nachschauen und mit *`/inventar einsetzen`* verwenden.");
             message.channel.send(rewardEmbed)
         }
         await authorData.save().catch(err => console.log(err));
