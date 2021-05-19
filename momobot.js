@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const misc = require('./functions/misc.js')
 const botUser = require('./modules/userdataHandler')
 const games = require('./data/games.json')
+const XpBooser = require('./inventory/items/XpMultiplicator.js')
 
 mongoose.connect(config.dburl, {
     useNewUrlParser: true,
@@ -63,12 +64,24 @@ client.on('message', async (message) => {
     }
 
     let authorData = await botUser.load(client, message.author.id)
-    let saving = authorData.levelData.gainXP(message.channel.id)
+    let saving = await authorData.levelData.gainXP(message.channel.id)
     if(saving){
         if (authorData.levelData.roleReward !== "/"){
             let role = message.member.guild.roles.cache.find(role => role.id === authorData.levelData.roleReward);
             message.member.roles.add(role)
             authorData.levelData.roleReward = "/"
+        }
+        if (authorData.levelData.boosterReward !== "/"){
+            let booster = new XpBooser(1, authorData.levelData.boosterReward)
+            authorData.inventory.addItem(booster, 1)
+            authorData.levelData.boosterReward = "/"
+
+            const rewardEmbed = new Discord.MessageEmbed()
+                .setAuthor(message.author.username+"#"+message.author.discriminator, message.author.displayAvatarURL())
+                .setTitle("BELOHNUNG VERFÜGBAR")
+                .setColor("0x79BF63")
+                .setDescription("Weil du Level **`"+authorData.levelData.lvl+"`** erreicht hast, erhältst du folgenden XP-Booster:\n\n**`"+booster.getInfo().invname+"`**\n\n*Du kannst deine XP-Booster in #Bot-Befehle mit *`/inventar items`* nachschauen und mit *`/inventar einsetzen`* verwenden.*");
+            message.channel.send(rewardEmbed)
         }
         await authorData.save().catch(err => console.log(err));
     }

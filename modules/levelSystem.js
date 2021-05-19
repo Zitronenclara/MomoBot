@@ -8,6 +8,7 @@ class levelSystem {
             this.xpGes = 0
             this.lvl = 1
             this.roleReward = "/"
+            this.boosterReward = "/"
             this.nextGainStamp = 0
             this.factor = 1
             this.multActive = false
@@ -25,15 +26,17 @@ class levelSystem {
                 this.factor = 1
                 this.multActive = false
                 this.multStamp = 0
+                this.boosterReward = "/"
             } else {
                 this.factor = obj.factor
                 this.multActive = obj.multActive
                 this.multStamp = obj.multStamp
+                this.boosterReward = obj.boosterReward
             }
         }
     }
 
-    gainXP(channelId) {
+    async gainXP(channelId) {
         if (config.blacklistedChannels.includes(channelId)) {
             return false
         }
@@ -58,6 +61,7 @@ class levelSystem {
             this.xp = overshoot
             this.lvl += 1
             this.checkForRoleReward()
+            this.checkForBoosterReward()
         }
     }
 
@@ -65,6 +69,13 @@ class levelSystem {
         let reward = config.roles.find(r => r.lvl === this.lvl)
         if (reward !== undefined) {
             this.roleReward = reward.id
+        }
+    }
+
+    checkForBoosterReward() {
+        let reward = config.boosters.find(b => b.lvl === this.lvl)
+        if (reward !== undefined) {
+            this.boosterReward = reward.booster
         }
     }
 
@@ -77,6 +88,18 @@ class levelSystem {
         } else if (emptyAmount === 0) {
             return config.xpBar.filled.repeat(config.xpBar.amount)
         } else {
+            if (emptyAmount > config.xpBar.amount){
+                emptyAmount = 20
+            }
+            if (emptyAmount < 0){
+                emptyAmount = 0
+            }
+            if (fullAmount > config.xpBar.amount){
+                fullAmount = config.xpBar.amount
+            }
+            if (fullAmount < 0){
+                fullAmount = 0
+            }
             return config.xpBar.filled.repeat(fullAmount) + config.xpBar.unfilled.repeat(emptyAmount)
         }
     }

@@ -27,5 +27,49 @@
             "lvl": 60,
             "id": "832739795536052326"
         }
+    ],
+    "boosters": [
+        {
+            "lvl": 10,
+            "booster": {
+                "duration": 7200000,
+                "factor": 1.5
+            }
+        },
+        {
+            "lvl": 20,
+            "booster": {
+                "duration": 10800000,
+                "factor": 2
+            }
+        },
+        {
+            "lvl": 30,
+            "booster": {
+                "duration": 14400000,
+                "factor": 3
+            }
+        },
+        {
+            "lvl": 40,
+            "booster": {
+                "duration": 21600000,
+                "factor": 4
+            }
+        },
+        {
+            "lvl": 50,
+            "booster": {
+                "duration": 43200000,
+                "factor": 6
+            }
+        },
+        {
+            "lvl": 60,
+            "booster": {
+                "duration": 86400000,
+                "factor": 10
+            }
+        }
     ]
 }
