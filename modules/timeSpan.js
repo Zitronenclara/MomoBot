@@ -18,12 +18,48 @@ module.exports = class timeSpan {
     }
 
     /**
+     * Adds a specified amount of seconds to the object's time
+     * 
+     * @param {number} seconds the amount of seconds that will be added
+     */
+     addSeconds(seconds){
+        this.time += (seconds*1000)
+    }
+
+    /**
+     * Removes a specified amount of seconds from the object's time
+     * 
+     * @param {number} seconds the amount of seconds that will be removed
+     */
+     removeSeconds(seconds){
+        this.time -= (seconds*1000)
+    }
+
+    /**
      * Returns the total amount of minutes
      * 
      * @returns {number} Total amount of minutes
      */
      getMinutes(){
         return Math.floor(this.time / 60000)
+    }
+
+    /**
+     * Adds a specified amount of minutes to the object's time
+     * 
+     * @param {number} minutes the amount of minutes that will be added
+     */
+     addMinutes(minutes){
+        this.time += (minutes*60000)
+    }
+
+    /**
+     * Removes a specified amount of minutes from the object's time
+     * 
+     * @param {number} minutes the amount of minutes that will be removed
+     */
+     removeMinutes(minutes){
+        this.time -= (minutes*60000)
     }
 
     /**
@@ -36,12 +72,48 @@ module.exports = class timeSpan {
     }
 
     /**
+     * Adds a specified amount of hours to the object's time
+     * 
+     * @param {number} hours the amount of hours that will be added
+     */
+     addHours(hours){
+        this.time += (hours*3600000)
+    }
+
+    /**
+     * Removes a specified amount of hours from the object's time
+     * 
+     * @param {number} hours the amount of hours that will be removed
+     */
+     removeHours(hours){
+        this.time -= (hours*3600000)
+    }
+
+    /**
      * Returns the total amount of days
      * 
      * @returns {number} Total amount of days
      */
      getDays(){
         return Math.floor(this.time / 86400000)
+    }
+
+    /**
+     * Adds a specified amount of days to the object's time
+     * 
+     * @param {number} days the amount of days that will be added
+     */
+     addDays(days){
+        this.time += (days*3600000)
+    }
+
+    /**
+     * Removes a specified amount of days from the object's time
+     * 
+     * @param {number} days the amount of days that will be removed
+     */
+     removeDays(days){
+        this.time -= (days*3600000)
     }
 
     /**
@@ -142,5 +214,27 @@ module.exports = class timeSpan {
         
         // return years
         return {unit: "year", unit_short: "yrs", unit_shortest: "y", amount_fixed: parseFloat((this.time/31557600000).toFixed(2)), amount_round: Math.round(this.time/31557600000), amount_exact: this.time/31557600000}
+    }
+
+    /**
+     * Returns the current midnight timestamp based on the unix-time of the object's milliseconds
+     * 
+     * @returns {number} current midnight timestamp of the specified day
+     */
+    getCurrentMidnightStamp(){
+        let d = new Date(this.time)
+        d.setHours(0, 0, 0, 0)
+        return + d
+    }
+
+    /**
+     * Returns the next midnight timestamp based on the unix-time of the object's milliseconds
+     * 
+     * @returns {number} midnight timestamp of the day after the specified day
+     */
+     getNexttMidnightStamp(){
+        let d = new Date(this.time)
+        d.setHours(24, 0, 0, 0)
+        return + d
     }
 }

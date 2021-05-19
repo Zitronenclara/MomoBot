@@ -38,7 +38,7 @@ client.once('ready', async () => {
         const channel = await client.channels.fetch(interaction.channel_id)
 
         let authorData = await botUser.load(client, author.id)
-        console.log(authorData)
+        
         const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         try {
             command.execute({"client": client, "author": {"info": author, "data": authorData}, "channel": channel, "args": args, "interaction": interaction});
