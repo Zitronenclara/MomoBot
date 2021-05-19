@@ -12,7 +12,7 @@ module.exports = {
 	options: [
         {
             "name": "giveitem",
-            "description": "Welchen User du genauer untersuchen möchtest",
+            "description": "Einem User ein item geben",
             "type": 1,
             "options": [
                 {

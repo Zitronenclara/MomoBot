@@ -107,20 +107,22 @@ module.exports.deleteGuildCommand = async function (application_id, guild_id, co
 }
 
 module.exports.enableCommandOwnerOnly = async function (application_id, guild_id, command_id) {
-    let headers = {
-        "Authorization": "Bot " + config.token
+    let header = {
+        "headers":{
+            "Authorization": "Bot " + config.token
+        }
     }
-    let json = {
+    let data = {
         "permissions": [
             {
                 "id": config.ownerid,
                 "type": 2,
-                "permission": True
+                "permission": true
             }
         ]
     }
 
-    axios.put(`https://discord.com/api/v8/applications/${application_id}/guilds/${guild_id}/commands/${command_id}/permissions`, headers=headers, json=json)
+    axios.put(`https://discord.com/api/v8/applications/${application_id}/guilds/${guild_id}/commands/${command_id}/permissions`, data, header)
         .catch(function (error) {
             console.log(error);
         });
