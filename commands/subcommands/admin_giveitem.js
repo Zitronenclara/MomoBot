@@ -48,7 +48,6 @@ module.exports = async function(cP) {
             if(!member.user.bot){
                 mData = await botUser.load(cP.client, member.id)
                 mData.inventory.addItem(item, obj.count)
-                mData.markModified("inventory")
                 await mData.save().catch(err => console.log(err));
             }
         })
