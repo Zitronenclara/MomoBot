@@ -27,8 +27,8 @@ for (const file of commandFiles) {
 client.once('ready', async () => {
     //misc.getGuildCommands(config.applicationID, config.mainGuildID)
     //misc.enableCommandOwnerOnly(config.applicationID, config.mainGuildID, "843865911102406687")
-    let cmd = client.commands.get("shop")
-    misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
+    //let cmd = client.commands.get("fun")
+    //misc.createGuildCommand(config.applicationID, config.mainGuildID, {name: cmd.name, description: cmd.description, options: cmd.options})
     console.log('Bot Online!');
 
     client.ws.on('INTERACTION_CREATE', async interaction => {

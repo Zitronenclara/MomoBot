@@ -1,0 +1,14 @@
+[
+    {
+        "name": "pokemontrainer",
+        "object": {"name": "XpMultiplicator", "count": 1, "other": {"duration": 7200000, "factor": 1.5}}
+    },
+    {
+        "name": "teentitans",
+        "object": {"name": "XpMultiplicator", "count": 1, "other": {"duration": 10800000, "factor": 2}}
+    },
+    {
+        "name": "spacecowboys",
+        "object": {"name": "XpMultiplicator", "count": 1, "other": {"duration": 14400000, "factor": 3}}
+    }
+]

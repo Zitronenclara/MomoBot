@@ -1,6 +1,7 @@
 const misc = require('./../../functions/misc.js')
 const items = require('./../../inventory/items/items.js')
 const botUser = require('./../../modules/userdataHandler.js')
+const presets = require('./../../data/itemPresets.json')
 const config = require('./../../config.json')
 
 module.exports = async function(cP) {
@@ -9,8 +10,11 @@ module.exports = async function(cP) {
     let userArg = args?.find(t => t.name === "user")?.value
     let objectArg = args?.find(t => t.name === "object")?.value
 
-    // insert obj = {name: itemName, count: itemCount, other: {other things}}
+    // insert obj = {name: itemName, count: itemCount, other: {other things}} or obj = {preset: presetName}
     let obj = JSON.parse(objectArg)
+    if (obj.preset){
+        obj = presets.find(p => p.name === obj.preset).object
+    }
     let itemClass = items[obj.name]
     
     let item;
