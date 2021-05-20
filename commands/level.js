@@ -49,6 +49,7 @@ module.exports = {
 				{name: "LEVEL", value: "**`"+data.levelData.lvl+"`**"},
 				{name: "ERFAHRUNG", value: "**`"+xp+"/"+reqXP+"XP`** Gesamt: **`"+data.levelData.xpGes+"XP`**"},
 				{name: "FORTSCHRITT `("+percent+"%)`", value: data.levelData.generateProgressBar()},
+				{name: "AKTIVE MINUTEN HEUTE", value: "`"+data.levelData.gainsToday+"`"},
 				{name: "XP-BOOST", value: boosterText}
 			);
 		misc.sendInteraction(cP.client, {"content": "","embeds": [levelembedd]}, cP.interaction)
