@@ -30,7 +30,7 @@
             "Neue Befehle: **/daily**, **/kaufen**, **/momocoins** und **/shop**",
             "Der **/giflist** Befehl zeigt jetzt wie viele Gifs in jeder Kategorie sind",
             "Der **/fun mock** Befehl wurde überarbeitet, er macht jetzt keine i's mehr größer, um Verwirrung mit kleinen L's zu vermeiden c:",
-            "Der **/level** Befehl zeigt jetzt, wieviele Minuten eine Person am aktuellen Tag im Chat aktiv war.",
+            "Der **/level** Befehl zeigt jetzt, wieviele Minuten eine Person am aktuellen Tag im Chat aktiv war",
             "Fehlerbehebungen beim Anzeigen der Levelkarte, welche zum crash geführt haben"
         ]
     }
