@@ -5,7 +5,21 @@
         "color": "0x61338A",
         "fields": [
             {"name": "Was sind XP-Multiplikatoren?", "value": "XP-Multiplikatoren, oder auch *XP-Booster*, sind Items, welche die erhaltenen XP pro Minute für einen bestimmten Zeitraum erhöht."},
-            {"name": "Wie bekommt man sowas?", "value": "XP-Multiplikatoren erhält man bei **Events**, durch das erreichen eines **10er Levels** oder im **Shop** (`/shop`)."}
+            {"name": "Wie bekommt man sowas?", "value": "XP-Multiplikatoren erhält man bei **Events**, durch das erreichen eines **10er Levels** oder im **Shop** (`/shop`)."},
+            {"name": "Wo kann ich meine aktuellen Booster sehen und wie setze ich die ein?", "value": "Zuerst musst du mit `/inventar items` nachschauen, welche **ID** der Booster hat, den du einsetzen möchtest (die steht immer ganz links in der Reihe, die [] gehören nicht mit dazu). Dannach musst du diese hinter `/inventar einsetzen` hinzufügen und schon aktiviert sich der Booster c: *Bedenke, dass du immer nur einen Booster auf einmal aktivieren kannst.*"},
+            {"name": "Wo kann ich sehen, wie lange mein Booster noch läuft?", "value": "Wenn du `/level` eingibst, kannst du den aktuellen Status des aktivierten Multiplikators nachschauen."}
+        ]
+    },
+    {
+        "name": "waehrung",
+        "title": "WÄHRUNGSSYSTEM",
+        "color": "0xF4FC03",
+        "fields": [
+            {"name": "Wie bekommt man die Serverwährung?", "value": "Die aktuelle Serverwährung heißt **MomoCoins** und man erhält sie entweder durch **Events** oder den **`/daily`** Befehl."},
+            {"name": "Wie funktioniert der /daily Befehl?", "value": "Den `/daily` Befehl kann man, wie der Name schon sagt, nur **ein mal am Tag** verwenden. Vorraussetzung dafür ist, dass du am gleichen Tag schon **5 Minuten im Chat aktiv** warst bzw. schon 5 mal XP erhalten hast. Sollte das der Fall sein, erhältst du, je nachdem wie hoch dein akuelles Level ist, eine bestimmte Anzal an **MomoCoins**. Wenn du mehrere Tage hintereinander `/daily` verwendest, baut sich eine Streak auf und du erhältst immer mehr MomoCoins als **Bonus**. Solltest du den Befehl **2 Tage lang nicht verwenden**, verschwindet deine Streak, deine maximale Streak bleibt allerdings für immer gespeichert c:"},
+            {"name": "Was bringen mir diese MomoCoins?", "value": "Mit **MomoCoins** kannst du **Items im Shop kaufen** (`/shop`). Aktuell gibt es *nur* **XP-Booster**, in Zukunft werden noch einige andere Sachen hinzugefügt, bleib gespannt!"},
+            {"name": "Wie kaufe ich Items?", "value": "Zuerst muss du bei `/shop` in deiner gewünschten Kategorie nachschauen, welche **ID** das Item hat, welches du kaufen möchtest (diese steht in der Reihe immer ganz links, die [] gehören nicht mit dazu). Dannach musst du diese ID bei `/kaufen` anfügen c: Solltest du **genügend MomoCoins** zur Verfügung haben, wird das Item sofort deinem Inventar hinzugefügt."},
+            {"name": "Wie setze ich das Item dann ein?", "value": "Um das Item einzusetzen musst du wie beim Itemkauf die **ID** wissen. Diese kannst du ganz einfach mit `/inventar items` nachschauen (steht ebenfalls ganz links in der Reihe, die [] gehören nicht mit dazu). Dannach musst du die **ID** einfach nur nach `/inventar einsetzen` anfügen und schon verwendest du das Item c:"}
         ]
     }
 ]
