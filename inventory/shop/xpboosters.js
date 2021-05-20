@@ -1,6 +1,8 @@
 const XpMultiplicator = require('./../items/XpMultiplicator.js')
 
 module.exports = {
+    name: "XP-BOOSTER",
+    color: "61338a",
     id: "XP",
     items: [
         {

@@ -18,5 +18,20 @@ module.exports = {
     ],
 	async execute(cP) {
 		let category = shopItems[cP?.args[0]?.value]
+        if (!category){
+            return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Ein unerwarteter Fehler ist aufgetreten!", cP.author, "0xf52411", cP.interaction)
+        }
+
+        let shopString = "`[ID]` | (**Preis**) **`Item Name`**\n\n";
+        for (i = 0; i < category.items.length; i++){
+            shopString += "`["+(category.id+i)+"]` | (**"+category.items[i].price+"**) **`"+category.items[i].item.getInfo().invname+"`**\n"
+        }
+
+        const shopEmbed = new Discord.MessageEmbed()
+            .setTitle(category.name)
+            .setColor(category.color)
+            .setFooter("Items kannst du mit folgendem Befehl kaufen:\n/kaufen ID")
+            .setDescription(shopString);
+        misc.sendInteraction(cP.client, {"content": "","embeds": [shopEmbed]}, cP.interaction)
 	}
 };

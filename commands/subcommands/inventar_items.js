@@ -60,7 +60,7 @@ module.exports = async function(cP) {
         .setAuthor(target.userData.username+"#"+target.userData.discriminator, target.userData.avatar)
         .setTitle("INVENTAR | Seite ("+(pageIndex+1)+"/"+list.length+")")
         .setColor("0xffbb4b")
-        .setFooter("Items kann man mit diesem Befehl einsetzen: /inventar einsetzen ID");
+        .setFooter("Items kann man mit diesem Befehl einsetzen:\n/inventar einsetzen ID");
     if (displayItems.length === 0){
         invEmbed.setDescription("**`Keine Items im Inventar`**")
     }else{

@@ -29,7 +29,7 @@
             "Neuer Oberbefehl: **/inventar** mit einsetzen, items und iteminfo",
             "Neue Befehle: **/daily**, **/momocoins** und **/shop**",
             "Der **/giflist** Befehl zeigt jetzt wie viele Gifs in jeder Kategorie sind",
-            "Der /fun mock Befehl wurde überarbeitet, er macht jetzt keine i's mehr größer, um Verwirrung mit kleinen L's zu vermeiden c:",
+            "Der **/fun mock** Befehl wurde überarbeitet, er macht jetzt keine i's mehr größer, um Verwirrung mit kleinen L's zu vermeiden c:",
             "Fehlerbehebungen beim Anzeigen der Levelkarte, welche zum crash geführt haben"
         ]
     }
