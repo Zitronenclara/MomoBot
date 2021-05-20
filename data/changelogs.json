@@ -23,7 +23,7 @@
     },
     {
         "name": "1.3",
-        "date": "irgendwann",
+        "date": "20.05.2021 - 21:42Uhr",
         "changes": [
             "Neuer Oberbefehl: **/inventar** mit einsetzen, items und iteminfo",
             "Neue Befehle: **/awards**, **/daily**, **/info**, **/kaufen**, **/momocoins** und **/shop**",
