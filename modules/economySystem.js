@@ -61,4 +61,14 @@ module.exports = class economySystem {
     calcDailyGain(lvlSys) {
         return Math.round(lvlSys.calcRequiredXP() / 10)
     }
+
+    remove(count) {
+        if (count > this.coins){
+            return false
+        }else{
+            this.coins -= count
+            this.coinsSpent += count
+            return true
+        }
+    }
 }

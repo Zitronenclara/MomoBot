@@ -8,7 +8,7 @@ module.exports = {
 	options: [
         {
             "name": "kategorie",
-            "description": "die kategorie von kaufbaren Items",
+            "description": "Die Kategorie von kaufbaren Items",
             "type": 3,
             "required": true,
             "choices": [
