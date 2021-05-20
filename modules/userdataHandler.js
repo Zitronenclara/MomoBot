@@ -23,7 +23,8 @@ module.exports.load = async function (client, userid){
                 economyData: es,
                 inventory: inv,
                 dataversion: config.dbv,
-                ships: []
+                ships: [],
+                awards: []
             })
             await newDoc.save().catch(err => console.log(err));
             return newDoc
@@ -56,6 +57,7 @@ async function updateData(data){
         data.ships = []
         data.inventory = inv
         data.economyData = eS
+        data.awards = []
     }
     if (data.dataversion === 1){
         let inv = new Inventory()
@@ -63,6 +65,7 @@ async function updateData(data){
         data.dataversion = 2
         data.inventory = inv
         data.economyData = eS
+        data.awards = []
     }
 
     return data

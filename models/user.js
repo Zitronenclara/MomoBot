@@ -7,7 +7,8 @@ const userSchema = mongoose.Schema({
     economyData: Object,
     inventory: Object,
     dataversion: Number,
-    ships: Array
+    ships: Array,
+    awards: Array
 });
 
 module.exports = mongoose.model("User", userSchema, "userdata")

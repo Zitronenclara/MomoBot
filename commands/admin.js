@@ -9,6 +9,10 @@ const sub = [
     {
         "name": "givecoins",
         "execute": require('./subcommands/admin_givecoins.js')
+    },
+    {
+        "name": "giveaward",
+        "execute": require('./subcommands/admin_giveaward.js')
     }
 ]
 
@@ -19,6 +23,31 @@ module.exports = {
         {
             "name": "giveitem",
             "description": "Einem User ein item geben",
+            "type": 1,
+            "options": [
+                {
+                    "name": "role",
+                    "description": "Rolle",
+                    "type": 8,
+                    "required": false
+                },
+                {
+                    "name": "user",
+                    "description": "User",
+                    "type": 6,
+                    "required": false
+                },
+                {
+                    "name": "object",
+                    "description": "Object",
+                    "type": 3,
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "giveaward",
+            "description": "Einem User ein award geben",
             "type": 1,
             "options": [
                 {
