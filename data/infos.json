@@ -21,5 +21,16 @@
             {"name": "Wie kaufe ich Items?", "value": "Zuerst muss du bei `/shop` in deiner gewünschten Kategorie nachschauen, welche **ID** das Item hat, welches du kaufen möchtest (diese steht in der Reihe immer ganz links, die [] gehören nicht mit dazu). Dannach musst du diese ID bei `/kaufen` anfügen c: Solltest du **genügend MomoCoins** zur Verfügung haben, wird das Item sofort deinem Inventar hinzugefügt."},
             {"name": "Wie setze ich das Item dann ein?", "value": "Um das Item einzusetzen musst du wie beim Itemkauf die **ID** wissen. Diese kannst du ganz einfach mit `/inventar items` nachschauen (steht ebenfalls ganz links in der Reihe, die [] gehören nicht mit dazu). Dannach musst du die **ID** einfach nur nach `/inventar einsetzen` anfügen und schon verwendest du das Item c:"}
         ]
+    },
+    {
+        "name": "levelsystem",
+        "title": "LEVELSYSTEM",
+        "color": "0x217DD9",
+        "fields": [
+            {"name": "Was ist das Levelsystem?", "value": "Im Gegensatz zu anderen Servern haben wir hier unser **ganz eigenes** Levelsystem. Das Ziel dieses Systems ist es, dass **aktive Servermitglieder** durch viel schreiben belohnt werden. Durch vieles Schreiben erhält man XP und **je mehr XP man hat, desto höher steigt man im Level auf**. **Bei jedem 10. Level** erwarten einen besondere Belohnungen, welche man in <#833300345714507807> nachschauen kann."},
+            {"name": "Wie genau bekommt man XP?", "value": "Man bekommt aktuell pro Nachricht pro Minute (damit man nicht einfach spammen kann um XP zu farmen) eine zufällige Zahl zwischen `15 - 25` als XP."},
+            {"name": "Wie sehe ich, welches Level ich bin?", "value": "Bei `/level` werden dir alle wichtigen Informationen angezeigt."},
+            {"name": "Wie kann ich nachschauen, wie ich im Vergleich zu anderen Stehe?", "value": "Dafür gibt es zwei verschiedene Befehle. Zum einen kannst du `/rangliste` verwenden. Dieser Befehl zeigt dir die **Top 15** des Servers an und solltest du nicht unter ihnen sein, wirst **du und jeweils die zwei über und unter dir** unter den Top 15 mit angezeigt. Zum anderen kannst du `/rang` verwenden, um noch deailliertere Infos über **die Person über und unter dir** zu erhalten und welcher Rang du auf der Servertopliste bist."}
+        ]
     }
 ]

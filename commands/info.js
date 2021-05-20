@@ -12,6 +12,7 @@ module.exports = {
         "required": true,
         "choices": [
             {"name": "Währung", "value": "waehrung"},
+            {"name": "Levelsystem", "value": "levelsystem"},
             {"name": "XP-Booster", "value": "xpbooster"}
         ]}
     ],
