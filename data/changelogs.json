@@ -26,7 +26,7 @@
         "date": "irgendwann",
         "changes": [
             "Neuer Oberbefehl: **/inventar** mit einsetzen, items und iteminfo",
-            "Neue Befehle: **/awards**, **/daily**, **/kaufen**, **/momocoins** und **/shop**",
+            "Neue Befehle: **/awards**, **/daily**, **/info**, **/kaufen**, **/momocoins** und **/shop**",
             "Es gibt jetzt **XP-BOOSTER**, welche man als Belohnung für erreichte 10er Level oder als Event-Trostpreise oder Gewinne erhalten kann",
             "Bei Events, ob gewonnen oder nicht, erhaltet ihr jetzt Awards, welche ihr mit **/awards** nachschauen könnt c: Vielleicht bringen die irgendwann noch mehr...",
             "Der **/giflist** Befehl zeigt jetzt wie viele Gifs in jeder Kategorie sind",

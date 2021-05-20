@@ -1,0 +1,11 @@
+[
+    {
+        "name": "xpbooster",
+        "title": "XP-MULTIPLIKATOREN",
+        "color": "0x61338A",
+        "fields": [
+            {"name": "Was sind XP-Multiplikatoren?", "value": "XP-Multiplikatoren, oder auch *XP-Booster*, sind Items, welche die erhaltenen XP pro Minute für einen bestimmten Zeitraum erhöht."},
+            {"name": "Wie bekommt man sowas?", "value": "XP-Multiplikatoren erhält man bei **Events**, durch das erreichen eines **10er Levels** oder im **Shop** (`/shop`)."}
+        ]
+    }
+]
