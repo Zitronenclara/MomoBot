@@ -21,7 +21,7 @@ module.exports = class economySystem {
         return eS
     }
 
-    doDaily(lvlSys) {
+    async doDaily(lvlSys) {
         let nowStamp = + new Date()
         let nextDailyStamp = new timeSpan(this.dailyStamp).getNextMidnightStamp()
         if (lvlSys.gainsToday < 5){
@@ -31,9 +31,9 @@ module.exports = class economySystem {
             let remainingTime = new timeSpan(nextDailyStamp - nowStamp).getBeautifiedTime()
             return {success: false, message: "Du musst noch **`"+remainingTime+"`** warten, bevor du deine nächsten täglichen MomoCoins abholen kannst!"}
         }
-
         this.checkStreak()
         let coinsGain = this.calcDailyGain(lvlSys)
+        coinsGain += Math.round(coinsGain * (0.025*this.dailyStreak))
         this.coins += coinsGain
         this.coinsGained += coinsGain
         this.dailyStamp = nowStamp
@@ -47,6 +47,9 @@ module.exports = class economySystem {
         // bigger than 2 days in milliseconds
         if (nowStamp - lastDaily > 172800000){
             this.dailyStreak = 1
+            if (this.maxStreak === 0){
+                this.maxStreak = 1
+            }
         }else{
             this.dailyStreak += 1
             if (this.dailyStreak > this.maxStreak){
