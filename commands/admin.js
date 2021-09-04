@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const config = require('./../config.json')
 const misc = require('./../functions/misc.js')
 
 const sub = [
@@ -97,7 +98,11 @@ module.exports = {
         }
     ],
 	async execute(cP) {
-		let subCommand = sub.find(s => s.name === cP.args[0].name)
-        subCommand.execute(cP)
+        if(cP.author.info.id === config.ownerid){
+            let subCommand = sub.find(s => s.name === cP.args[0].name)
+            subCommand.execute(cP)
+        }else{
+            return await misc.generateEmbed(cP.client, "⚠️ Fehler ⚠️", "Du hast nicht die nötigen Berechtigungen, um diesen Befehl auszuführen.", cP.author, "0xf52411", cP.interaction)
+        }
 	}
 };

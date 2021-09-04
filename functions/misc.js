@@ -74,7 +74,7 @@ module.exports.createGuildCommand = async function (application_id, guild_id, da
     axios.post(`https://discordapp.com/api/v8/applications/${application_id}/guilds/${guild_id}/commands`, data, http_config)
         .catch(function (error) {
             console.log(error);
-        });
+    });
 }
 
 module.exports.getGuildCommands = async function (application_id, guild_id) {
