@@ -16,6 +16,7 @@ module.exports = class XpMultiplicator extends Item {
         this.factor = obj.factor
         this.duration = obj.duration
         this.id = (obj.duration/1000)+"XPMULT"+(obj.factor*100)
+        this.count = count
     }
 
     static loadFrom(obj) {

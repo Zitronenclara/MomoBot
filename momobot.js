@@ -12,7 +12,7 @@ mongoose.connect(config.dburl, {
     useUnifiedTopology: true
 }, function (err) {
     if (err) throw err;
-    console.log('successfully connected to database ' + config.dburl);
+    console.log('successfully connected to database');
 });
 
 const client = new Discord.Client();
